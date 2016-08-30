@@ -1,0 +1,13 @@
+
+android {
+	productFlavors {
+		"nativescript-bolts" {
+			dimension "nativescript-bolts"
+		}
+	}
+}
+
+dependencies {
+	compile 'com.parse.bolts:bolts-tasks:1.4.0'
+}
+

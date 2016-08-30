@@ -1,0 +1,59 @@
+{
+	"name": "nativescript-bolts",
+	"version": "1.0.0",
+	"description": "Nativescript plugin that wraps the Bolts Framework",
+	"main": "bolts.js",
+	"typings": "index.d.ts",
+	"nativescript": {
+		"platforms": {
+			"android": "2.2.0",
+			"ios": "2.2.1"
+		}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/roblav96/nativescript-bolts.git"
+	},
+	"keywords": [
+		"nativescript",
+		"bolts",
+		"ecosystem:nativescript",
+		"nativescript-android",
+		"nativescript-ios"
+	],
+	"author": {
+		"name": "Rob Laverty",
+		"email": "roblav96@gmx.com"
+	},
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/roblav96/nativescript-bolts/blob/master/LICENSE"
+	},
+	"bugs": {
+		"url": "https://github.com/roblav96/nativescript-bolts/issues"
+	},
+	"homepage": "https://github.com/roblav96/nativescript-bolts",
+	"readmeFilename": "README.md",
+	"scripts": {
+		"build": "tsc",
+		"demo.ios": "npm run preparedemo && cd demo && tns run ios",
+		"demo.android": "npm run preparedemo && cd demo && tns livesync android --watch",
+		"debug.ios": "npm run preparedemo && cd demo && tns debug ios --emulator",
+		"debug.android": "npm run preparedemo && cd demo && tns debug android --emulator",
+		"preparedemo": "npm run build && cd demo && tns plugin remove nativescript-bolts && tns plugin add .. && tns install",
+		"setup": "cd demo && npm install && cd .. && npm run build && cd demo && tns plugin add .. && cd ..",
+		"prepublish": "tsc",
+		"start": "npm run demo.ios"
+	},
+	"dependencies": {
+		"ansicolors": "latest",
+		"ansistyles": "latest",
+		"lodash": "latest"
+	},
+	"devDependencies": {
+		"tns-core-modules": "^2.2.0",
+		"tns-platform-declarations": "^2.2.0",
+		"typescript": "^1.8.10"
+	}
+}
+

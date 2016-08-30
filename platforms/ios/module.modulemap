@@ -1,0 +1,6 @@
+framework module Bolts {
+	umbrella header "Headers/Bolts.h"
+	export *
+	module * { export * }
+}
+
